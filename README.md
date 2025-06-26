@@ -66,10 +66,6 @@ jenkins --version
 
 ```bash
 
-java -jar jenkins.war --httpListenAddress=0.0.0.0
-
-HTTP_HOST=0.0.0.0
-
 sudo ufw allow 8080
 
 ```
@@ -79,15 +75,15 @@ sudo ufw allow 8080
 
 ### 🤵🏻 Find the IP of the server and connect to Jenkins
 
+set the network Adapter 1 to 'Attached to : Bridge Adapter' for your Jernkins server in virtualbox
+
+find the IP in the variable /VirtualBox/GuestInfo/Net/0/V4/IP
+
 ```bash
 vboxmanage list runningvms # display information about the running VMs
 
 VBoxManage guestproperty enumerate <Jenkins-server-IP>
 ```
-
-set the network attachment to NAT for your Jernkins server in virtualbox
-
-find the IP in the variable /VirtualBox/GuestInfo/Net/0/V4/IP
 
 ping the IP address to check it reponds
 ```bash
