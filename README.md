@@ -62,6 +62,11 @@ systemctl --full status jenkins
 jenkins --version
 ```
 
+check /var/lib/jenkins/secrets/initialAdminPassword for the initial admin password
+```bash
+cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+
 
 ## 💻 Back to your host machine
 
