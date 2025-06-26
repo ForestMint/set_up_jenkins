@@ -62,14 +62,6 @@ systemctl --full status jenkins
 jenkins --version
 ```
 
-### 🛜 Open the connectivity
-
-```bash
-
-sudo ufw allow 8080
-
-```
-
 
 ## 💻 Back to your host machine
 
