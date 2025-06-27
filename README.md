@@ -81,7 +81,7 @@ find the IP in the variable /VirtualBox/GuestInfo/Net/0/V4/IP
 ```bash
 vboxmanage list runningvms # display information about the running VMs
 
-VBoxManage guestproperty enumerate <Jenkins-server-IP>
+VBoxManage guestproperty enumerate <Jenkins-server-name>
 ```
 
 ping the IP address to check it reponds
