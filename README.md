@@ -91,3 +91,4 @@ ping <Jenkins-server-IP>
 
 open you favorite browser and go to http://Jenkins-server-IP:8080
 
+type the password previously displayed to unlock your aceess to your Jenkins server
