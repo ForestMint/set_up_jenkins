@@ -24,7 +24,7 @@ echo "deb https://packages.adoptium.net/artifactory/deb $(awk -F= '/^VERSION_COD
 
 sudo apt update # update if you haven't already
 
-sudo apt install temurin-21-jdk
+yes Y | sudo apt install temurin-21-jdk
 
 sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc \
   https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
@@ -35,7 +35,7 @@ echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]" \
 
 sudo apt-get update
 
-sudo apt-get install jenkins
+yes Y | sudo apt-get install jenkins
 
 EOF
 
