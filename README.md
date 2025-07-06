@@ -27,7 +27,21 @@ sudo chmod 777 /var/lib/jenkins/secrets/initialAdminPassword
 
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
+open a tunnel to the Internet for webhooks
+```bash
+sudo apt update && sudo apt install unzip -y #install unzip
 
+wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-stable-linux-amd64.zip # download the .zip file from the web
+
+unzip ngrok-stable-linux-amd64.zip
+
+sudo mv ngrok /usr/local/bin
+
+ngrok config add-authtoken <your-auth-token> # add authentication token
+
+ngrok http 8080 # to expose Jenkins running on port 8080
+# this command will show a public HTTPS URL like https://7a45-176-149-217-153.ngrok-free.app/
+```
 
 ## 💻 Back to your host machine
 
