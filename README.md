@@ -45,23 +45,6 @@ ngrok http 8080 # to expose Jenkins running on port 8080
 
 ## 💻 Back to your host machine
 
-### 🤵🏻 Find the IP of the server and connect to Jenkins
-
-set the network Adapter 1 to 'Attached to : Bridge Adapter' for your Jernkins server in virtualbox
-
-find the IP in the variable /VirtualBox/GuestInfo/Net/0/V4/IP
-
-```bash
-vboxmanage list runningvms # display information about the running VMs
-
-VBoxManage guestproperty enumerate <Jenkins-server-name>
-```
-
-ping the IP address to check it reponds
-```bash
-ping <Jenkins-server-IP>
-```
-
-open you favorite browser and go to http://Jenkins-server-IP:8080
+open you favorite browser and type the public HTTPS URL in the search bar
 
 type the password previously displayed to unlock your aceess to your Jenkins server
