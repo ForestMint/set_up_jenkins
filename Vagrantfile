@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
 
 
   config.vm.provision "shell", inline: <<-SHELL
-  cat <<EOF > /home/vagrant/my_script.sh
+  cat <<EOF > /home/vagrant/install_java_then_jenkins_then_ngrok.sh
 #!/bin/bash
 sudo apt install -y wget apt-transport-https gpg
 
@@ -37,9 +37,17 @@ sudo apt-get update
 
 yes Y | sudo apt-get install jenkins
 
+sudo apt update && sudo apt install unzip -y #install unzip
+
+wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-stable-linux-amd64.zip # download the .zip file from the web
+
+unzip ngrok-stable-linux-amd64.zip
+
+sudo mv ngrok /usr/local/bin
+
 EOF
 
-  chmod +x /home/vagrant/my_script.sh
+  chmod +x /home/vagrant/install_java_then_jenkins_then_ngrok.sh
 SHELL
 
 
